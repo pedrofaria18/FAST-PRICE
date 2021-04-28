@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FAST PRICE</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFUMWdr_RtUpKbBPTyAoIxDmgpa_WE0M8&callback=initMap&libraries=&v=weekly&language=pt-BR&region=BR" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <script src="./scripts/geolocation.js"></script>
+    <script src="https://kit.fontawesome.com/7f2c27f27b.js"crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"/>
+  </head>
+  <body>
+      <header>
+
+            <!-- MENU -->
+    <nav>
+        <!-- BOTÃO MENU RESPONSIVO -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+ 
+        <!-- LOGO -->
+        <label for="" class="logo"><img src="img/logo.png" alt="logo" width="150px" height="80px"></label>
+ 
+        <!-- NAVEGAÇÕES -->
+        <ul>
+            <li><a  href="#" class="itens" >HOME</a></li>
+            <li><a href="#" class="active_itens">LOGIN</a></li>
+            <button id="btn_logout" >Sair</button>
+            
+        </ul>
+ 
+     </nav>
+      </header>
+    <div id="floating-panel">
+      <strong>Partida:</strong>
+      <select id="start">
+        <option><label>Escolha...</label></option>
+        <option value="Av. alvares cabral, 33, belo horizonte">Casa</option>
+        <option value="Av. Amazonas, 478, belo horizonte, mg">Trabalho</option>
+        
+      
+      </select>
+      <br />
+      <strong>Destino:</strong>
+      <select id="end">
+        <option><label>Escolha...</label></option>
+        <option value="Rua dos guajajaras, 11, belo horizonte, mg">Carrefour bairro</option>
+        <option value="Av. parana, 470, belo horizonte, mg">Supermercado BH</option>
+        <option value="Av. francisco sales, 898, belo horizonte, mg">Supermercado Extra</option>
+      </select>
+    </div>
+    <div id="right-panel"></div>
+    <div id="map"></div>
+
+
+     <!-- RODAPÉ -->
+  <footer class="conteiner-fluid rodape">
+    <div class="row">
+      <!-- iNFORMAÇÕES -->
+      <div class="col-md-3 esquerda">
+        <p class="nome">FAST PRICE</p>
+        <p class="sobre"><a href="#">Sobre o FAST PRICE</a></p>
+        <p class="anuncie">
+          <a href="#">Anuncie seu supermercado no FAST PRICE</a>
+        </p>
+      </div>
+
+      <!-- LOGOS -->
+      <div class="col-md-6 centro">
+        <div class="row">
+          <div class="container logoRodape">
+            <img
+              src="IMG/LOGOS SUPERMERCADOS/logo_extra.png"
+              alt="logo extra"
+              width="130px"
+            />
+            <img
+              src="IMG/LOGOS SUPERMERCADOS/logo_bh.png"
+              alt="logo bh"
+              width="130px"
+            />
+            <img
+              src="IMG/LOGOS SUPERMERCADOS/Carrefour-logo.png"
+              alt="logo carrefour"
+              width="130px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- RODAPÉ -->
+      <div class="col-md-3 direita">
+        <p class="duvidas">DÚVIDAS?</p>
+        <p class="fale"><a class="faleA" href="#">FALE CONOSCO</a></p>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p class="copy">© FAST PRICE. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+

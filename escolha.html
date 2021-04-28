@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>FAST PRICE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/escolha.css">
+    <link rel="sortcut icon" href="IMG/miniatura.png" type="image/gif" />
+    <script src="https://kit.fontawesome.com/7f2c27f27b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+</head>
+
+<body onload="init (); retornaCarrinhoNoOnload();">
+
+    <!-- MENU -->
+
+    <nav class="">
+        <div class="col-4">
+            <!-- LOGO -->
+            <label for="" class="logo"><img src="IMG/logo.png" alt="logo" width="150px" height="80px"></label>
+        </div>
+
+        <div class="col-4">
+            <input class="pesquisa" type="text" placeholder="Pesquisar...">
+            <button class="botaoBuscar">
+                    <i class="fas fa-search"></i>
+                </button>
+        </div>
+
+        <div class="col-4">
+            <!-- NAVEGAÇÕES -->
+            <ul>
+                <li>
+                    <a href="index.html" class="active_itens">HOME</a>
+                </li>
+                <li>
+                    <a class="itens" href="#">PERFIL</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="conteudo">
+
+        <div class="menu2">
+
+            <div class="row">
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                            CATEGORIAS
+                        </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li class="dropdown-item inner">BISCOITO
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="escolha.html?categoria=recheados">RECHEADOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="escolha.html?categoria=waffer">WAFFER</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-item inner">HIGIENE PESSOAL
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="escolha.html?categoria=desodorante">DESODORANTE</a>
+                                    </li>
+                                    <li>
+                                        <a href="escolha.html?categoria=sabonete">SABONETE</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-item inner">LATICINIOS
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="escolha.html?categoria=manteiga">MANTEIGA</a>
+                                    </li>
+                                    <li>
+                                        <a href="escolha.html?categoria=requeijao">REQUEIJÃO</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-item inner">LIMPEZA
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="escolha.html?categoria=detergente">DETERGENTE</a>
+                                    </li>
+                                    <li>
+                                        <a href="escolha.html?categoria=desinfetante">DESINFETANTE</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-item inner">PADARIA
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="escolha.html?categoria=paoForma">PÃO DE FORMA</a>
+                                    </li>
+                                    <li>
+                                        <a href="escolha.html?categoria=paoIntegral">PÃO INTEGRAL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+        <div>
+            <div class="row produtos">
+
+            </div>
+        </div>
+
+    </main>
+
+    <aside class="carrinho">
+        <p class="car ">CARRINHO</p>
+
+        <div class="carrinhoCompras">
+
+        </div>
+
+        <div class="fimL col-12 ">
+            <div class="central ">
+                <button class="botaofim">
+                    <a href="comparacao.HTML" class="botaofim">FINALIZAR LISTA</a>
+                </button>
+            </div>
+
+            <div class="central ">
+                <button onclick=" localStorage.clear(); location.reload();" class="botaolim ">LIMPAR CARRINHO</button>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- RODAPÉ -->
+    <footer class="conteiner-fluid rodape ">
+
+        <div class="row ">
+
+            <!-- iNFORMAÇÕES -->
+            <div class="col-md-3 esquerda ">
+                <p class="nome ">FAST PRICE</p>
+                <p class="sobre ">
+                    <a href="# ">Sobre o FAST PRICE</a>
+                </p>
+                <p class="anuncie ">
+                    <a href="# ">Anuncie seu supermercado no FAST PRICE</a>
+                </p>
+            </div>
+
+            <!-- LOGOS -->
+            <div class="col-md-6 centro ">
+                <div class="row ">
+                    <div class="container logoRodape ">
+                        <img src="IMG/LOGOS SUPERMERCADOS/logo_extra.png " alt="logo extra " width="130px">
+                        <img src="IMG/LOGOS SUPERMERCADOS/logo_bh.png " alt="logo bh " width="130px">
+                        <img src="IMG/LOGOS SUPERMERCADOS/Carrefour-logo.png " alt="logo carrefour " width="130px">
+                    </div>
+                </div>
+            </div>
+
+            <!-- RODAPÉ -->
+            <div class="col-md-3 direita ">
+                <p class="duvidas ">DÚVIDAS?</p>
+                <p class="fale ">
+                    <a class="faleA " href="# ">FALE CONOSCO</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <p class="copy ">© FAST PRICE. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="scripts/escolha.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+
+</html>

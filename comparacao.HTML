@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>FAST PRICE</title>
+    <!--meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/comparacao.CSS">
+    <link rel="sortcut icon" href="IMG/miniatura.png" type="image/gif" />
+</head>
+
+<body onload="initComparacao ()">
+    <nav class="">
+        <div class="col-4">
+            <!-- LOGO -->
+            <label for="" class="logo"><img src="IMG/logo.png" alt="logo" width="150px" height="80px"></label>
+        </div>
+
+        <div class="col-4">
+            <input class="pesquisa" type="text" placeholder="Pesquisar...">
+            <button class="botaoBuscar">
+                    <i class="fas fa-search"></i>
+                </button>
+        </div>
+
+        <div class="col-4">
+            <!-- NAVEGAÇÕES -->
+            <ul>
+                <li>
+                    <a href="home.html" class="active_itens">HOME</a>
+                </li>
+                <li>
+                    <a class="itens" href="#">PERFIL</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="conteiner-fluid main">
+        <div>
+            <div class="col-12 compare">
+                <h1>COMPARE OS PREÇOS</h1>
+            </div>
+        </div>
+        <div class="mostrarProdutosCarrinho">
+
+        </div>
+
+
+    </main>
+
+
+    <div class="conteiner-fluid escolha">
+        <div class="col-12">
+            <h2>ESCOLHA SEU SUPERMERCADO</h2>
+        </div>
+
+        <div id="supers" class="row">
+            <div class="col-4"><img src="IMG/LOGOS SUPERMERCADOS/logo_bh.png" alt="bh"></div>
+            <div class="col-4"><img src="IMG/LOGOS SUPERMERCADOS/Carrefour-logo.png" alt="car"></div>
+            <div class="col-4 "><img class="pose" src="IMG/LOGOS SUPERMERCADOS/logo_extra.png" alt="ex"></div>
+        </div>
+
+        <div class="row" id="precoFinal">
+            
+        </div>
+
+        <div id="botoes" class="row">
+            <div class="col-4 escolha">
+                <button type="button" class="btn btn-light" value="submit"><a href="geolocation.html">ESCOLHER</a></button>
+            </div>
+            <div class="col-4 escolha">
+                <button type="button" class="btn btn-light" value="submit"><a href="geolocation.html">ESCOLHER</a></button>
+            </div>
+            <div class="col-4 escolha">
+                <button type="button" class="btn btn-light" value="submit"><a href="geolocation.html">ESCOLHER</a></button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="conteiner-fluid rodape">
+
+        <div class="row">
+
+            <div class="col-md-3 esquerda">
+
+                <p class="nome">FAST PRICE</p>
+                <p class="sobre">
+                    <a href="#">Sobre o FAST PRICE</a>
+                </p>
+                <p class="anuncie">
+                    <a href="#">Anuncie seu supermercado no FAST PRICE</a>
+                </p>
+
+            </div>
+
+            <div class="col-md-6 centro">
+
+                <div class="row">
+                    <div class="container">
+                        <img src="IMG/LOGOS SUPERMERCADOS/logo_extra.png" alt="logo extra" width="100px">
+                        <img src="IMG/LOGOS SUPERMERCADOS/logo_bh.png" alt="logo bh" width="100px">
+                        <img src="IMG/LOGOS SUPERMERCADOS/Carrefour-logo.png" alt="logo carrefour" width="100px">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-3 direita">
+
+                <p class="duvidas">DÚVIDAS?</p>
+                <p class="fale">
+                    <a href="#">FALE CONOSCO</a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="copy">© FAST PRICE. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="scripts/escolha.js"></script>
+    <script>
+        
+
+        var initComparacao = function() {
+            var pegarProdutosCarrinho = localStorage.getItem(produtosCarrinho);
+
+            var elementoProdutos = document.querySelector("div.mostrarProdutosCarrinho");
+            var elementoPreco = document.querySelector("div#precoFinal");
+            var textoHTML = "";
+            var precoHTML = "";
+            
+
+            var totalBh = 0;
+            var totalCarrefour = 0;
+            var totalExtra = 0;
+
+            JSON.parse(localStorage.getItem('produtos')).map(produto => {
+
+                totalBh += Number(produto.bh);
+                totalCarrefour += Number(produto.carrefour);
+                totalExtra += Number(produto.extra);
+
+                textoHTML =
+                    textoHTML +
+                `<div class="row">
+                    <div id="fotoprod" class="divprods col-3">
+                        <img class="miniatura" src="${produto.imagem}" alt="${produto.nome}">
+                    </div>
+
+                    <div id="desc" class="divprods col-4">
+                        <strong>${produto.descricao}
+                        </strong>
+                    </div>
+
+                    <div id="quantdiv" class="divprods col-2">
+                        <span class="qtdComparacao">1</span>
+                    </div>
+
+                    <div id="preco" class="divprods col-3">
+                        <div id="logomarket">
+                            <div class="col-4"><img src="IMG/LOGOS SUPERMERCADOS/logo_bh.png" alt="beaga"></div>
+                            <div class="col-4"><img src="IMG/LOGOS SUPERMERCADOS/Carrefour-logo.png" alt="carre"></div>
+                            <div class="col-4"><img src="IMG/LOGOS SUPERMERCADOS/logo_extra.png" alt="ext"></div>
+                        </div>
+
+                        <div id="precoprod">
+                            <div class="col-4 precoprod">
+                                <strong>R$${produto.bh}</strong>
+                            </div>
+                            <div class="col-4 precoprod">
+                                <strong>R$${produto.carrefour}</strong>
+                            </div>
+                            <div class="col-4 precoprod">
+                                <strong>R$${produto.extra}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            })
+            elementoProdutos.innerHTML = textoHTML;
+
+
+            precoHTML = precoHTML + 
+            `<div class="col-4 totalprod">
+                <span>TOTAL:</span>
+                <strong>R$${totalBh}</strong>
+            </div>
+
+            <div class="col-4 totalprod">
+                <span>TOTAL:</span>
+                <strong>R$${totalCarrefour}</strong>
+            </div>
+
+            <div class="col-4 totalprod">
+                <span>TOTAL:</span>
+                <strong>R$${totalExtra}</strong>
+            </div>`
+            elementoPreco.innerHTML = precoHTML;
+
+
+            salvarPreco(totalBh, totalCarrefour, totalExtra)
+        }
+
+        function salvarPreco (totalBh, totalCarrefour, totalExtra) {
+            let precoFinal = []
+            precoFinal.push({totalBh, totalCarrefour, totalExtra});
+            localStorage.setItem('preços', JSON.stringify(precoFinal));
+        }
+
+    </script>
+
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f2c27f27b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
